@@ -44,9 +44,23 @@
   	<a href="#fsl">FSL Details</a>
   	<a href="#research">Research Papers</a>
   	<a href="#login">
-  	<form action="php/login.php" method="post">
-  	Email address<input type="text" name="email" required>&nbsp;Password<input type="password" name="pwd" required>&nbsp;&nbsp;<input type="submit" name="submitbtn" value="Sign In">
+  	<?php 
+  	if(!isset($_SESSION['Name'])) {
+  		echo " <form action='php/login.php' method='post'>
+  	Email address<input type='text' name='email' required>&nbsp;Password<input type='password' name='pwd' required>&nbsp;&nbsp;<input type='submit' name='submitbtn' value='Sign In'>
   	</form>
+  			";
+  	}
+  	else {
+  		echo "
+  		<div class='search-bar'>
+  			<form name='search-form'>
+  				<input type='text' name='searchQuery' placeholder='Search'>
+  				<button id='search-button'>Search</button> 
+  		</div>
+  		";
+  	}
+  	?>
   	</a>
 	</div>
 	<div id="three-columns">
@@ -72,7 +86,7 @@
 					<div class="image-input">
 						<label for="image-input">
 							Upload Image:    <img src="images/image upload.png">
-						</label><input type="file" name="blog_pic" accept="image/*" id="image-input">
+						</label><input type="file" name="blog_pic" accept="image/*" id="image-input-post">
 					</div>
 					<div class="post-upload">
 						<input type="submit" name="write" value="Write Post">
@@ -87,7 +101,7 @@
     				<div class="image-input">
 						<label for="image-input">
 							Upload Image:    <img src="images/image upload.png">
-						</label><input type="file" name="pic" accept="image/*" id="image-input">
+						</label><input type="file" name="pic" accept="image/*" id="image-input-books">
 					</div>
     				<input type="submit" value="Upload File" name="submitfile">
 					</form>
@@ -96,19 +110,20 @@
 					<h4>ADD EVENTS</h4>
 					<form action="uploadEvent.php" method="post" enctype="multipart/form-data" style="background-color: lightgrey;  width: 150px; border: 25px #0077b5; padding: 25px; margin: 25px;">
     				<input type="text" name="eventToUpload" id="eventToUpload" placeholder=" Event Heading">
-    				<input type="text" name="url" id="url" placeholder=" Upload URL"> <br>
+    				<input type="text" name="url" id="url-events" placeholder=" Upload URL"> <br>
     				<input type="submit" value="Upload Event" name="submitevent">
 				</form>
 				</div>
 				<div class="research">
 					<h4>ADD RESEARCH PAPER</h4>
 					<form action="uploadResearch.php" method="post" enctype="multipart/form-data" style="background-color: lightgrey;  width: 150px; border: 25px #0077b5; padding: 25px; margin: 25px;">
-    				<input type="text" name="url" id="url" placeholder=" Upload URL"> <br>
+    				<input type="text" name="url" id="url-research" placeholder=" Upload URL"> <br>
     				<input type="submit" value="Upload Event" name="submitevent">
 				</form>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>

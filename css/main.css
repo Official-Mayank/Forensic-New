@@ -553,8 +553,6 @@ iframe {
 #column2{
   border-spacing: 2px;
   border-radius: 5px;
-  background: #ffffff;
-  margin: 5px;
   padding: 5px;
   width: 400px;
 }
@@ -587,6 +585,19 @@ iframe {
 {
   font-family: Poppins-Bold;
 }
+
+.column-item {
+  background: white;
+  font-family: Poppins-Bold, sans-serif;
+  padding: 5px;
+  margin: 0 5px 5px 5px;
+  border-radius: 5px;
+}
+
+.column-item:first-child {
+  margin-bottom: 20px;
+}
+
 #three-coulmns
 {
   padding: 20px;
@@ -638,17 +649,4 @@ iframe {
   background-color: rgb(74, 77, 81);
   border-radius: 5px; 
   margin:5px;
-}
-.book-upload > .post-upload >input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-.post-upload >input[type=submit]:hover {
-    background-color: #45a049;
 }

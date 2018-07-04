@@ -9,7 +9,7 @@
 	$head=$_POST['posttitle'];
 	$data=$_POST['sharepost'];
 	$mysqli=new mysqli($host,$user,$passw,$database);
-	$target_path="../blog_images/";
+	$target_path="blog_images/";
 	$target_path=$target_path.basename($_FILES['blog_pic']['name']);
 	move_uploaded_file($_FILES['blog_pic']['tmp_name'], $target_path);
 	 $query="INSERT INTO $table values('$email','$head','$data','$target_path')";

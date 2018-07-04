@@ -72,15 +72,16 @@
 				<div id="email"><p>E-mail: <?php echo "$email";?></p></div>
 			</div>
 			<div id="column2" style="border-radius: 3px; background-color: #0000000";>
+			<div class="column-item">
 				<div class="write-post-title">
 					<h3>Write Post</h3>
 				</div>
 				<form action="php/blog-update.php" method="post" enctype="multipart/form-data">
 					<div class="post-title-wrapper">
-						<input type="text" id="posttitle" name="posttitle" placeholder="Title" style="width:530px">
+						<input type="text" id="posttitle" name="posttitle" placeholder="Title" style="width:100%">
 					</div>
 					<div class="user-post-wrapper">
-						<input type="text" id="userpost" name="sharepost" placeholder="Share an article or image" style="width:530px; height: 100px;">
+						<input type="text" id="userpost" name="sharepost" placeholder="Share an article or image" style="width:100%; height: 100px;">
 					</div>
 
 					<div class="image-input">
@@ -91,7 +92,8 @@
 					<div class="post-upload">
 						<input type="submit" name="write" value="Write Post">
 					</div>
-				</form>
+					</form>
+			</div>
 			</div>
 			<div id="column3">
 				<h2>Upload</h2>
@@ -114,12 +116,12 @@
 				</div>
 				<div class="event">
 					<div style="background-color: #00b594; border-radius: 2px; padding: 5px;"><h4>ADD EVENTS</h4></div>
-					<form action="php/event_upload.php" method="post" enctype="multipart/form-data" >
+					<form action="uploadEvent.php" method="post" enctype="multipart/form-data" >
     				<div class="post-title-wrapper">
-						<input type="text" id="posttitle" name="posttitle" placeholder="Enter Title" required style="width:230px">
+						<input type="text" id="posttitle" name="posttitle" placeholder="Enter Title" style="width:230px">
 					</div>
 					<div class="post-title-wrapper">
-						<input type="text" id="posttitle" name="url" placeholder="Enter URL"  required style="width:230px margin-top:5px;">
+						<input type="text" id="posttitle" name="posttitle" placeholder="Enter URL"  required="Enter" style="width:230px margin-top:5px;">
 					</div>
     				<div class="post-upload">
     				<input type="submit" value="Upload Event" name="Event Upload">

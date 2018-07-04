@@ -44,9 +44,23 @@
   	<a href="#fsl">FSL Details</a>
   	<a href="#research">Research Papers</a>
   	<a href="#login">
-  	<form action="php/login.php" method="post">
-  	Email address<input type="text" name="email" required>&nbsp;Password<input type="password" name="pwd" required>&nbsp;&nbsp;<input type="submit" name="submitbtn" value="Sign In">
+  	<?php 
+  	if(!isset($_SESSION['Name'])) {
+  		echo " <form action='php/login.php' method='post'>
+  	Email address<input type='text' name='email' required>&nbsp;Password<input type='password' name='pwd' required>&nbsp;&nbsp;<input type='submit' name='submitbtn' value='Sign In'>
   	</form>
+  			";
+  	}
+  	else {
+  		echo "
+  		<div class='search-bar'>
+  			<form name='search-form'>
+  				<input type='text' name='searchQuery' placeholder='Search'>
+  				<button id='search-button'>Search</button> 
+  		</div>
+  		";
+  	}
+  	?>
   	</a>
 	</div>
 	<div id="three-columns">
@@ -72,7 +86,7 @@
 					<div class="image-input">
 						<label for="image-input">
 							Upload Image:    <img src="images/image upload.png">
-						</label><input type="file" name="blog_pic" accept="image/*" id="image-input">
+						</label><input type="file" name="blog_pic" accept="image/*" id="image-input-post">
 					</div>
 					<div class="post-upload">
 						<input type="submit" name="write" value="Write Post">
@@ -88,6 +102,7 @@
 						<input type="text" id="posttitle" name="posttitle" placeholder="Title" style="width:230px">
 					</div>
     				<div class="image-input">
+
 						<label for="image-input" >
 							Upload book:    <img src="images/book.png" width="28px" height="28px" style="margin: 10px;">
 						</label><input type="file" name="book" accept="application/pdf" id="image-input">
@@ -128,5 +143,6 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>

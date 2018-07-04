@@ -82,29 +82,47 @@
 			<div id="column3">
 				<h2>Upload</h2>
 				<div class="book-upload">
-					<h4>ADD BOOKS</h4>
+					<div style="background-color: #00b594; border-radius: 2px; padding: 5px;"><h4>ADD BOOKS</h4></div>
 					<form action="uploadFile.php" method="post" enctype="multipart/form-data">
-    				<div class="image-input">
-						<label for="image-input">
-							Upload Image:    <img src="images/image upload.png">
-						</label><input type="file" name="pic" accept="image/*" id="image-input">
+					<div class="post-title-wrapper" >
+						<input type="text" id="posttitle" name="posttitle" placeholder="Title" style="width:230px">
 					</div>
+    				<div class="image-input">
+						<label for="image-input" >
+							Upload book:    <img src="images/book.png" width="28px" height="28px" style="margin: 10px;">
+						</label><input type="file" name="book" accept="application/pdf" id="image-input">
+					</div>
+					<div class="post-upload">
     				<input type="submit" value="Upload File" name="submitfile">
+					</div>
 					</form>
 				</div>
 				<div class="event">
-					<h4>ADD EVENTS</h4>
-					<form action="uploadEvent.php" method="post" enctype="multipart/form-data" style="background-color: lightgrey;  width: 150px; border: 25px #0077b5; padding: 25px; margin: 25px;">
-    				<input type="text" name="eventToUpload" id="eventToUpload" placeholder=" Event Heading">
-    				<input type="text" name="url" id="url" placeholder=" Upload URL"> <br>
-    				<input type="submit" value="Upload Event" name="submitevent">
+					<div style="background-color: #00b594; border-radius: 2px; padding: 5px;"><h4>ADD EVENTS</h4></div>
+					<form action="uploadEvent.php" method="post" enctype="multipart/form-data" >
+    				<div class="post-title-wrapper">
+						<input type="text" id="posttitle" name="posttitle" placeholder="Enter Title" style="width:230px">
+					</div>
+					<div class="post-title-wrapper">
+						<input type="text" id="posttitle" name="posttitle" placeholder="Enter URL" style="width:230px margin-top:5px;">
+					</div>
+    				<div class="post-upload">
+    				<input type="submit" value="Upload Event" name="Event Upload">
+					</div>
 				</form>
 				</div>
 				<div class="research">
-					<h4>ADD RESEARCH PAPER</h4>
-					<form action="uploadResearch.php" method="post" enctype="multipart/form-data" style="background-color: lightgrey;  width: 150px; border: 25px #0077b5; padding: 25px; margin: 25px;">
-    				<input type="text" name="url" id="url" placeholder=" Upload URL"> <br>
-    				<input type="submit" value="Upload Event" name="submitevent">
+					<div style="background-color: #00b594; border-radius: 2px; padding: 5px;"><h4>ADD RESEARCH PAPER</h4></div>
+					<form action="uploadResearch.php" method="post" enctype="multipart/form-data">
+					<div class="post-title-wrapper">
+						<input type="text" id="posttitle" name="posttitle" placeholder="Enter Heading" style="width:230px margin-top:5px;">
+					</div>
+    				<div class="post-title-wrapper">
+						<input type="text" id="posttitle" name="posttitle" placeholder="Enter URL" style="width:230px margin-top:5px;">
+					</div>
+    				<div class="post-upload">
+    				<input type="submit" value="Upload Event" name="Event Upload">
+					</div>
 				</form>
 				</div>
 			</div>

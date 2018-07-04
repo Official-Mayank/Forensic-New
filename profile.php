@@ -97,15 +97,15 @@
 				<h2>Upload</h2>
 				<div class="book-upload">
 					<div style="background-color: #00b594; border-radius: 2px; padding: 5px;"><h4>ADD BOOKS</h4></div>
-					<form action="uploadFile.php" method="post" enctype="multipart/form-data">
+					<form action="php/book_upload.php" method="post" enctype="multipart/form-data">
 					<div class="post-title-wrapper" >
-						<input type="text" id="posttitle" name="posttitle" placeholder="Title" style="width:230px">
+						<input type="text" id="posttitle" name="posttitle" placeholder="Title" required style="width:230px">
 					</div>
     				<div class="image-input">
 
 						<label for="image-input" >
 							Upload book:    <img src="images/book.png" width="28px" height="28px" style="margin: 10px;">
-						</label><input type="file" name="book" accept="application/pdf" id="image-input">
+						</label><input type="file" name="book" accept="application/pdf" id="image-input" required>
 					</div>
 					<div class="post-upload">
     				<input type="submit" value="Upload File" name="submitfile">
@@ -114,12 +114,12 @@
 				</div>
 				<div class="event">
 					<div style="background-color: #00b594; border-radius: 2px; padding: 5px;"><h4>ADD EVENTS</h4></div>
-					<form action="uploadEvent.php" method="post" enctype="multipart/form-data" >
+					<form action="php/event_upload.php" method="post" enctype="multipart/form-data" >
     				<div class="post-title-wrapper">
-						<input type="text" id="posttitle" name="posttitle" placeholder="Enter Title" style="width:230px">
+						<input type="text" id="posttitle" name="posttitle" placeholder="Enter Title" required style="width:230px">
 					</div>
 					<div class="post-title-wrapper">
-						<input type="text" id="posttitle" name="posttitle" placeholder="Enter URL" style="width:230px margin-top:5px;">
+						<input type="text" id="posttitle" name="url" placeholder="Enter URL"  required style="width:230px margin-top:5px;">
 					</div>
     				<div class="post-upload">
     				<input type="submit" value="Upload Event" name="Event Upload">
